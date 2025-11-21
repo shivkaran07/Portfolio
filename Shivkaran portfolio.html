@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shivkaran Gurjar – Portfolio</title>
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      margin:0;
+      background:#fff;
+      color:#000;
+    }
+    img{border-radius:50%;width:150px;height:150px;transition:transform .3s}
+    img:hover{transform:scale(1.1)}
+
+    #navbar{
+      background:navy;
+      color:#fff;
+      padding:10px;
+      text-align:center;
+      position:sticky;top:0;z-index:1000;
+    }
+    #navbar a{
+      color:#fff;text-decoration:none;margin:0 15px;font-weight:bold;
+      transition:color .3s,background-color .3s,padding .3s;
+    }
+    #navbar a:hover{
+      color:yellow;background:#001f4d;padding:8px 12px;border-radius:5px;
+    }
+
+    #hero{background:lightblue;text-align:center;padding:60px 20px;animation:fadeIn 2s}
+    #hero h1{font-size:40px;color:navy}
+
+    section{padding:40px 20px;text-align:center}
+    #skills div, .project-card{
+      margin:20px auto;padding:15px;max-width:300px;
+      background:#f0f0f0;border-radius:10px;
+      transition:transform .3s,box-shadow .3s;
+    }
+    #skills div:hover, .project-card:hover{
+      transform:scale(1.05);
+      box-shadow:0 4px 10px rgba(0,0,0,.2);
+    }
+
+    #contact a{color:navy;text-decoration:none;font-weight:bold;transition:color .3s}
+    #contact a:hover{color:darkred}
+
+    form input, form textarea{
+      width:80%;
+      max-width:400px;
+      padding:10px;
+      margin:10px auto;
+      display:block;
+      border:1px solid #ccc;
+      border-radius:5px;
+      font-size:16px;
+    }
+    form input:focus, form textarea:focus{
+      outline:none;
+      border-color:navy;
+      box-shadow:0 0 5px 
+      rgba(0,0,128,.3);
+    }
+    button{
+      background:navy;
+      color:#fff;
+      padding:10px 20px;
+      border:none;
+      border-radius:5px;
+      font-size:16px;
+      cursor:pointer;
+      margin:10px 0;
+    }
+    button:hover{
+      background:darkblue
+    }
+
+    /* ---------- Social icons ---------- */
+    .social-icons i{
+      font-size:24px;
+      margin:10px;
+      color:navy;
+      transition:color .3s;
+    }
+    .social-icons i:hover{
+      color:dark
+    }
+
+    #footer{
+      background:navy;
+      color:#fff;
+      text-align:center;
+      padding:15px}
+
+  </style>
+
+  <script>
+    function showMessage(){
+      alert("Thank you for contacting me!");
+    }
+  </script>
+</head>
+<body>
+  <div id="navbar">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div id="hero">
+    <h1>Hi, I'm Shivkaran Gurjar</h1>
+    <p>Web Developer | Designer</p>
+  </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="Shivkaran Gurjar.jpg" alt="Shivkaran Gurjar">
+    <p>Hello! I’m Shivkaran Gurjar, an aspiring frontend developer learning
+       HTML &amp; CSS. I love building creative and simple websites. In my free
+       time I explore new tech and improve my coding skills.</p>
+    <a href="resume.pdf" download><button>Download Resume</button></a>
+  </section>
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div><strong>HTML</strong><br>Basic structure and tags</div>
+    <div><strong>CSS</strong><br>Layout, color, simple design</div>
+    <div><strong>JavaScript</strong><br>Basic logic (learning)</div>
+  </section>
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-card">
+      <strong>Project 1</strong>
+      <p>Simple web page using HTML &amp; CSS.</p>
+      <img src="project1.jpg" alt="HTML CSS Project" width="100%">
+    </div>
+    <div class="project-card">
+      <strong>Project 2</strong>
+      <p>Basic calculator interface (coming soon).</p>
+      <img src="project2.jpg" alt="Calculator Project" width="100%">
+    </div>
+  </section>
+  <section id="education">
+    <h2>Education</h2>
+    <ul style="list-style:none;padding:0">
+      <li><strong>2022:</strong> Class 10 from Abhaneri</li>
+      <li><strong>2024:</strong> Class 12 from Bandikui</li>
+      <li><strong>2025:</strong> Now B.Tech from Anand College Jaipur</li>
+    </ul>
+  </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="showMessage(); return false;">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="social-icons">
+      <a href="mailto:shivkaran23227@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/shivkaran07" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+  <div id="footer">
+    &copy; 2025 Shivkaran Gurjar. All rights reserved.
+  </div>
+</body>
+</html>
